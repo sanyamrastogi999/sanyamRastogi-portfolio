@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanyam Rastogi - BPO Operations Leader | 14+ Years Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            line-height: 1.6; 
+            color: #2d3748; 
+            background: #f8fafc;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        header { 
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%); 
+            color: white; 
+            padding: 2.5rem 0; 
+            text-align: center; 
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        header .container { position: relative; z-index: 1; }
+        header h1 { 
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem); 
+            font-weight: 700; 
+            margin-bottom: 0.25rem; 
+            letter-spacing: -0.02em;
+        }
+        header p { font-size: 1.15rem; font-weight: 400; opacity: 0.95; margin-bottom: 1.5rem; }
+        .contact { 
+            display: flex; 
+            justify-content: center; 
+            gap: 2rem; 
+            font-size: 1rem; 
+            flex-wrap: wrap;
+            font-weight: 500;
+        }
+        .contact a { color: #60a5fa; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        
+        nav { 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(20px);
+            padding: 0.75rem 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            gap: 1rem; 
+            flex-wrap: wrap;
+        }
+        nav a { 
+            color: #475569; 
+            text-decoration: none; 
+            font-weight: 500; 
+            padding: 0.5rem 1.25rem; 
+            border-radius: 50px; 
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        nav a:hover { 
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8); 
+            color: white; 
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(59,130,246,0.3);
+        }
+        
+        section { padding: 2.5rem 0; }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.1);
+        }
+        h2 { 
+            color: #1e293b; 
+            text-align: center; 
+            font-size: 2rem; 
+            font-weight: 700; 
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        h2::after { 
+            content: ''; 
+            display: block; 
+            width: 50px; 
+            height: 3px; 
+            background: linear-gradient(90deg, #3b82f6, #10b981); 
+            margin: 0.75rem auto 0;
+            border-radius: 2px;
+        }
+        
+        .summary { 
+            font-size: 1.1rem; 
+            text-align: center; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            color: #4b5563;
+            font-weight: 400;
+        }
+        .summary strong { color: #1e293b; }
+        
+        /* Compact Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .timeline::before { 
+            content: ''; 
+            position: absolute; 
+            left: 50%; 
+            top: 0; 
+            bottom: 0; 
+            width: 2px; 
+            background: linear-gradient(to bottom, #3b82f6, #10b981); 
+            transform: translateX(-50%);
+        }
+        .timeline-item { 
+            position: relative; 
+            margin: 1.5rem 0; 
+            width: 48%; 
+            opacity: 0;
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+        .timeline-item:nth-child(odd) { margin-left: 2%; }
+        .timeline-item:nth-child(even) { margin-left: 52%; }
+        @keyframes slideInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .timeline-item:nth-child(odd) { animation-delay: 0.05s; }
+        .timeline-item:nth-child(even) { animation-delay: 0.1s; }
+        .timeline-content { 
+            background: white; 
+            padding: 1.25rem 1.5rem; 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08); 
+            position: relative;
+            border-top: 3px solid #3b82f6;
+        }
+        .timeline-item:nth-child(even) .timeline-content { border-top-color: #10b981; }
+        .timeline-dot { 
+            position: absolute; 
+            left: 50%; 
+            top: 0.75rem; 
+            transform: translateX(-50%); 
+            width: 12px; 
+            height: 12px; 
+            background: #3b82f6; 
+            border: 3px solid white; 
+            border-radius: 50%; 
+            box-shadow: 0 2px 8px rgba(59,130,246,0.3);
+            z-index: 2;
+        }
+        .timeline-item:hover .timeline-dot {
+            transform: translateX(-50%) scale(1.2);
+        }
+        .timeline-date { 
+            font-weight: 600; 
+            color: #3b82f6; 
+            font-size: 0.9rem; 
+            margin-bottom: 0.5rem;
+        }
+        .timeline-title { 
+            font-size: 1.2rem; 
+            font-weight: 700; 
+            color: #1e293b; 
+            margin-bottom: 0.25rem;
+        }
+        .timeline-company { 
+            color: #64748b; 
+            font-weight: 600; 
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .timeline-item ul {
+            list-style: none;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .timeline-item li {
+            padding: 0.4rem 0;
+            padding-left: 1rem;
+            position: relative;
+            color: #4b5563;
+        }
+        .timeline-item li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        .achievement {
+            color: #059669 !important;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .skill-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .skill-card:nth-child(1) { background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); }
+        .skill-card:nth-child(2) { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+        .skill-card:nth-child(3) { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .skill-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .skill-card h3 { font-size: 1.3rem; font-weight: 700; color: #1e293b; margin-bottom: 0.75rem; }
+        .skill-card p { font-size: 1rem; color: #4b5563; line-height: 1.5; }
+        
+        footer { 
+            text-align: center; 
+            padding: 2.5rem 0 2rem;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%); 
+            color: #cbd5e1; 
+            margin-top: 3rem;
+        }
+        footer p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+        footer a { color: #60a5fa; text-decoration: none; font-weight: 500; }
+        footer a:hover { text-decoration: underline; }
+        
+        @media (max-width: 768px) {
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; margin-left: 45px !important; margin-right: 0 !important; margin: 1rem 0; }
+            .timeline-dot { left: -35px; }
+            .contact { flex-direction: column; gap: 0.75rem; font-size: 0.95rem; }
+            .container { padding: 0 1rem; }
+            section { padding: 2rem 0; }
+            .card { padding: 1.5rem; margin-bottom: 1rem; }
+            h2 { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sanyam Rastogi</h1>
+            <p>BPO Operations Leader | Assistant Manager | 14+ Years Experience</p>
+            <div class="contact">
+                <span><i class="fas fa-map-marker-alt"></i> Gurugram, Haryana | <i class="fas fa-phone"></i> +91 98118 46909</span>
+                <span><i class="fas fa-envelope"></i> sanyamrastogi999@gmail.com</span>
+                <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/sanyam-rastogi-121a9315a" target="_blank">LinkedIn</a></span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#summary"><i class="fas fa-user-tie"></i> Summary</a></li>
+                <li><a href="#timeline"><i class="fas fa-road"></i> Timeline</a></li>
+                <li><a href="#skills"><i class="fas fa-chart-line"></i> Competencies</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="summary" class="summary-section">
+        <div class="container">
+            <div class="card">
+                <h2>Professional Summary</h2>
+                <p class="summary">Dynamic BPO leader with <strong>14+ years</strong> progressing from Executive to <strong>Assistant Manager</strong>. Proven in <strong>managing 20+ agent teams</strong>, achieving <strong>&lt;2% attrition</strong>, <strong>15% efficiency gains</strong>, and <strong>100% compliance</strong>. Six Sigma certified expert in KPI/SLA mastery, skip tracing, Power BI analytics, content moderation, trust & safety. <strong>Immediate joiner</strong> ready to drive operations excellence.[file:1]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <div class="container">
+            <div class="card">
+                <h2>Career Timeline</h2>
+                <div class="timeline">
+                    <!-- Present Role -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">May 2025 – Present</div>
+                            <div class="timeline-title">Quality Assurance Analyst</div>
+                            <div class="timeline-company">KHP Remote Pvt Ltd</div>
+                            <ul>
+                                <li class="achievement">Skip tracing & data mining expert improving RPC rates</li>
+                                <li>Quality support to collections agents & legal</li>
+                                <li>Compliance-driven investigations[file:1]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Assistant Manager -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: #10b981;"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jan 2021 – Nov 2024</div>
+                            <div class="timeline-title">Assistant Manager Operations</div>
+                            <div class="timeline-company">Concentrix Pvt Daksh Ltd</div>
+                            <ul>
+                                <li class="achievement"><strong>20+ AGENTS</strong> | &lt;2% attrition</li>
+                                <li class="achievement"><strong>15% EFFICIENCY</strong> | Six Sigma</li>
+                                <li>100% compliance | Content Moderation[file:1]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Quality Analyst -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">May 2015 – Jan 2021</div>
+                            <div class="timeline-title">Quality Analyst</div>
+                            <div class="timeline-company">Concentrix Pvt Daksh Ltd</div>
+                            <ul>
+                                <li class="achievement"><strong>BEST QA</strong> | 11% rejection reduction</li>
+                                <li>Calibration leader | Six Sigma projects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Senior Executive -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jul 2012 – May 2015</div>
+                            <div class="timeline-title">Senior Executive</div>
+                            <div class="timeline-company">Concentrix Pvt Daksh Ltd</div>
+                            <ul>
+                                <li>Sprint telecom email support</li>
+                                <li>New hire mentoring & onboarding</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Executive -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Nov 2009 – Jul 2012</div>
+                            <div class="timeline-title">Executive Technical Support</div>
+                            <div class="timeline-company">Concentrix Pvt Daksh Ltd</div>
+                            <ul>
+                                <li class="achievement"><strong>95% FCR</strong></li>
+                                <li>Technical troubleshooting excellence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="card">
+                <h2>Key Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">👥</div>
+                        <h3>Leadership</h3>
+                        <p><strong>20+ Team Managed</strong><br>&lt;2% Attrition | Workforce Planning</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📊</div>
+                        <h3>Analytics</h3>
+                        <p><strong>Power BI | Six Sigma</strong><br>Advanced Excel | Performance Reporting</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🔍</div>
+                        <h3>Operations</h3>
+                        <p><strong>Skip Tracing Expert</strong><br>Collections | KPI/SLA Mastery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Sanyam Rastogi | <strong>14+ Years BPO Excellence</strong></p>
+            <p><a href="#timeline">Explore Timeline ↑</a> | Immediate Joiner</p>
+        </div>
+    </footer>
+</body>
+</html>
